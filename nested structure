@@ -1,0 +1,20 @@
+#include<stdio.h>  
+struct address   
+{  
+    char school[120];  
+    int pin;  
+    char phone[14];  
+};  
+struct student
+{  
+    char name[20];  
+    struct address add;  
+};  
+void main ()  
+{  
+    struct student stu;  
+    printf("Enter student information?(Name, School, PIN, Phone)\n");  
+    scanf("%s %s %d %s",stu.name,stu.add.school, &stu.add.pin, stu.add.phone);  
+    printf("Printing the employee information....\n");  
+    printf("name: %s\nCity: %s\nPincode: %d\nPhone: %s",stu.name,stu.add.school,stu.add.pin,stu.add.phone);  
+}  
